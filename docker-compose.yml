@@ -1,6 +1,8 @@
 services:
   db:
     image: postgres:15
+    ports:
+      - 5555:5432
     volumes:
       - "claper-db:/var/lib/postgresql/data"
     healthcheck:
