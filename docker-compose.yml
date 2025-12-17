@@ -14,6 +14,7 @@ services:
     env_file: .env
     networks:
       - claper-net
+      - coolify
   
 
 volumes:
@@ -23,3 +24,7 @@ volumes:
 networks:
   claper-net:
     driver: bridge
+  
+  coolify:
+    external: true
+    name: coolify
